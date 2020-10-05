@@ -19,6 +19,10 @@ public class Resident {
 		this.apartment = apartment;
 		this.cars = null;
 	}
+	
+	public Resident() {
+		// TODO Auto-generated constructor stub
+	}
 	//getters and setters
 	public int getId() {
 		return id;
