@@ -11,13 +11,13 @@ public class Apartment {
 	private List<Resident> residents;
 	private List<Pet> pets;
 	
-	public Apartment(int id, char buildingLetter, int roomNumber, Float monthly_rent, List<Resident> residents, List<Pet> pets) {
+	public Apartment(int id, char buildingLetter, int roomNumber, Float monthly_rent) {
 		this.id = id;
 		this.buildingLetter= buildingLetter;
 		this.roomNumber= roomNumber;
 		this.monthly_rent= monthly_rent;
-		this.residents = residents;
-		this.pets = pets;
+		this.residents = null;
+		this.pets = null;
 	}
 	
 	//getters and setters
@@ -45,18 +45,22 @@ public class Apartment {
 	public void setMonthly_rent(Float monthly_rent) {
 		this.monthly_rent = monthly_rent;
 	}
-	
-	//not sure if this is best way to implement
 	public List<Resident> getResidents() {
 		return residents;
 	}
-	public void setResidents(List<Resident> residents) {
-		this.residents = residents;
+	public void addResident(Resident resident) {
+		this.residents.add(resident);
 	}
 	public List<Pet> getPets() {
 		return pets;
 	}
-	public void setPets(List<Pet> pets) {
-		this.pets = pets;
+	public void addPet(Pet pet) {
+		this.pets.add(pet);
+	}
+	public void dropPets() {
+		this.pets = null;
+	}
+	public void dropResidents() {
+		this.residents = null;
 	}
 }

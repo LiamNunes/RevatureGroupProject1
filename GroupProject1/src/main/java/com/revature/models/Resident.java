@@ -11,13 +11,13 @@ public class Resident {
 	
 	
 	
-	public Resident(int id, String firstName, String lastName, Apartment apartment, List<Car> cars) {
+	public Resident(int id, String firstName, String lastName, Apartment apartment) {
 		super();
 		this.id = id;
 		this.firstName = firstName;
 		LastName = lastName;
 		this.apartment = apartment;
-		this.cars = cars;
+		this.cars = null;
 	}
 	//getters and setters
 	public int getId() {
@@ -44,12 +44,13 @@ public class Resident {
 	public void setApartment(Apartment apartment) {
 		this.apartment = apartment;
 	}
-	
-	//not sure if best way to implement
 	public List<Car> getCars() {
 		return cars;
 	}
-	public void setCars(List<Car> cars) {
-		this.cars = cars;
+	public void addCar(Car car) {
+		this.cars.add(car);
+	}
+	public void dropCars() {
+		this.cars = null;
 	}
 }
