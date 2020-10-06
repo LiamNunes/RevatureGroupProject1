@@ -8,6 +8,7 @@ public class Car {
 	private String plate;
 	private Resident owner;
 	
+	public Car() {}
 	public Car (int id, String make, String model, int year, String plate, Resident owner) {
 		this.id = id;
 		this.make = make;

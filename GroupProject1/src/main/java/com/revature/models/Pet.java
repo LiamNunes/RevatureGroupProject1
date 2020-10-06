@@ -8,7 +8,7 @@ public class Pet {
 	private boolean isServiceAnimal;
 	
 	
-	
+	public Pet() {}
 	public Pet(int id, String breed, String name, Apartment apartment, boolean isServiceAnimal) {
 		this.id = id;
 		this.breed = breed;

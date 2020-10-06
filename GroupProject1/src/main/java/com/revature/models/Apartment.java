@@ -11,6 +11,7 @@ public class Apartment {
 	private List<Resident> residents;
 	private List<Pet> pets;
 	
+	public Apartment() {}
 	public Apartment(int id, char buildingLetter, int roomNumber, Float monthly_rent) {
 		this.id = id;
 		this.buildingLetter= buildingLetter;
